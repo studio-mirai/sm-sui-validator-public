@@ -1,0 +1,14 @@
+[Unit]
+Description=sui-bridge-node
+
+[Service]
+User=sui
+WorkingDirectory=/opt/sui/
+Environment=RUST_BACKTRACE=1
+Environment=RUST_LOG=info,sui_core=debug,narwhal=debug,consensus=debug,jsonrpsee=error
+ExecStart=/opt/sui/bin/sui-bridge --config-path /opt/sui/config/bridge.yml
+Restart=always
+CPUAffinity=26 27 28 29 30 31
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,14 @@
+---
+server-listen-port: 9191
+metrics-port: 9185
+bridge-authority-key-path: /opt/sui/keys/bridge-authority.key
+run-client: false
+approved-governance-actions: []
+sui:
+  sui-rpc-url: <SUI_RPC_URL>
+  sui-bridge-chain-id: 1
+eth:
+  eth-rpc-url: <ETH_RPC_URL>
+  eth-bridge-proxy-address: "0x0000000000000000000000000000000000000000"
+  eth-bridge-chain-id: 11
+  eth-contracts-start-block-fallback: 0
